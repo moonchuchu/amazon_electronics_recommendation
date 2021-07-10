@@ -13,7 +13,17 @@ Here, I will go over recommendation system building process using Amazon's Elect
 
 ### 1. Data Review and Prep
 a) The data is retrieved from Kaggle dataset : https://www.kaggle.com/prokaggler/amazon-electronic-product-recommendation. 
-Originally the dataset has 78 million record. To reduce dataset volume, I used the sampling method first. It gave nice balance of 1-5 rating distribution but when it comes to product : rating volume ratio, the sampling resulted in data sparsity that product : rating ratio was only 1:3 while the original set has 1:9 ratio. 
+Originally the dataset has 78 million record. To reduce dataset volume, I used the sampling method first. It gave nice balance of 1-5 rating distribution.
+<br>
+original dataset
+![image](https://user-images.githubusercontent.com/12857624/125157021-6c2b2480-e11d-11eb-9ce3-45b29f3cf294.png)
+
+
+sampled dataset
+![image](https://user-images.githubusercontent.com/12857624/125157048-8533d580-e11d-11eb-99dc-519a26363b23.png)
+
+<br>
+but when it comes to product : rating volume ratio, the sampling resulted in data sparsity that product : rating ratio was only 1:3 while the original set has 1:9 ratio. 
 
 
 ![image](https://user-images.githubusercontent.com/12857624/125155197-10f43480-e113-11eb-8982-257a3d79f749.png)

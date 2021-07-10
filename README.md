@@ -9,7 +9,8 @@
 ### A good recommendation system boosts online sales revenue and many customers are dependant on onlilne market place's recommended product before making the final purchase.
 <br>
 Here, I will go over recommendation system building process using Amazon's Electronics review data. 
-<br>
+
+
 ### 1. Data Review and Prep
 a) The data is retrieved from Kaggle dataset : https://www.kaggle.com/prokaggler/amazon-electronic-product-recommendation. 
 Originally the dataset has 78 million record. To reduce dataset volume, I used the sampling method first. It gave nice balance of 1-5 rating distribution but when it comes to product : rating volume ratio, the sampling resulted in data sparsity that product : rating ratio was only 1:3 while the original set has 1:9 ratio. 

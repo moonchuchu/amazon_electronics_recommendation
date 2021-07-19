@@ -31,11 +31,6 @@ b) Upon examining number of users (x-axis) and number of ratings (y-axis), 90% o
 ![image](https://user-images.githubusercontent.com/12857624/125155197-10f43480-e113-11eb-8982-257a3d79f749.png)
 
 
-c) By looking at user:product rating volume and by setting heuristic cut off which is users with at least 100 reviews, I was able to reduce the dataset to 44K from 78MM.
-
-![image](https://user-images.githubusercontent.com/12857624/125157236-95988000-e11e-11eb-8889-84fc4fe79c9a.png)
-
-
 ### 2. Model Building 
 <br>
 For the model building I used surprise package (https://surprise.readthedocs.io/en/stable/index.html) which is an easy-to-use Python scikit for recommender systems.
@@ -45,24 +40,18 @@ With surprise 1) k-NN Based Algorithm 2)Matrix Factorization Based Algorithms 3)
 Here, 11 models were compared like below and for this selected Amazon eletronics dataset with 100 review users, the BaselineOnly algorithm gave us the best rmse.
 
 
-![image](https://user-images.githubusercontent.com/12857624/125155483-1d798c80-e115-11eb-88b3-5b56d2df3e3d.png)
+![image](https://user-images.githubusercontent.com/12857624/126117849-052091c8-8b22-4e66-8b8a-8db822b8f6a4.png)
 
-Since BaselineOnly algorithm gave us the best rmse, therefore, I trained and predicted with BaselineOnly and use Alternating Least Squares (ALS) which outputs 0.9484 as prediction rmse accuracy. 
+SVDpp performs best 
 
 
-### 3. Prediction 
+### 3. Model Tuning 
+
+To find the best k for SVDpp, below plot was drawn. Usibg GridsearchCV, optimal k=6 was found. 
+
+![image](https://user-images.githubusercontent.com/12857624/126118269-3322d630-14db-448a-8bdf-5f9b80751503.png)
+
+
+
  
-Let's use above method to product best and worst prediction. 
 
-<br> Best Prediction
-
-![image](https://user-images.githubusercontent.com/12857624/125156818-510be500-e11c-11eb-9c68-0e6ae68b4930.png)
-
-<br> Worst Prediction
-
-![image](https://user-images.githubusercontent.com/12857624/125156851-831d4700-e11c-11eb-8273-f72f32acc7d7.png)
-
-
-### 4. Future Improvement
-
-Due to the big datasize (78MM), I limited the data by users with 100 or more reviews but if possible I would like to apply the entire dataset if it algins with sample data set's predition output.
